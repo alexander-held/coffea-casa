@@ -170,8 +170,8 @@ class CoffeaCasaCluster(HTCondorCluster):
             contact_address = "".join(str(item) for item in full_address_list)
             external_ip_string = '"' + contact_address + '"'
         # HTCondor logging
-        job_config["log_directory"] = "logs"
-        job_config["silence_logs"] = "DEBUG"
+        job_config["log_directory"] = "/data/alheld/log_test"
+        job_config["silence_logs"] = False
         ## Scheduler settings
         # we need to pass and check protocol for scheduler
         # (format should be not 'tls://'' but 'tls')
